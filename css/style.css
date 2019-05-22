@@ -64,8 +64,13 @@ h1 {
   font-size: var(--heading-size);
 }
 
-table {
+form {
+  display: block;
   text-align: center;
+}
+
+#message {
+  height: 100px;
 }
 
 

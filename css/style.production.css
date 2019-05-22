@@ -60,8 +60,13 @@ h1 {
   font-size: 30px;
 }
 
-table {
+form {
+  display: block;
   text-align: center;
+}
+
+#message {
+  height: 100px;
 }
 
 
