@@ -15,12 +15,13 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--primary-color);
 }
+
 
 .logo {
   width: 200px;
@@ -63,6 +64,11 @@ h1 {
   font-size: var(--heading-size);
 }
 
+table {
+  text-align: center;
+}
+
+
 .profile {
   max-width: 700px;
   margin: 0 auto;
@@ -80,19 +86,21 @@ h1 {
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 300px 300px;
   grid-gap: 30px;
-  margin-left: auto;
+  justify-content: center;
 
 }
 
-.grid__item {
-  background-color: lightgray;
-}
 
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.grid__item {
+  background-color: lightgray;
+  color: black;
 }
 
 a {
@@ -164,13 +172,13 @@ button:focus,
   display: inline-block;
   font-family: inherit;
   background-color: lightblue;
+  color: black;
   color: var(--text-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   transition-duration: 0.9s;
-  transition-property: black;
 }
 
 @keyframes color-change {
