@@ -1,13 +1,11 @@
 :root {
-  --primary-color: #F8F8FF;
-  --text-color: #000000;
-  --active-link-color:  #191970;
+  --primary-color: #f8f8ff;
+  --text-color: #000;
+  --active-link-color: #191970;
   --visited-link-color: #696969;
   --bold: bold;
   --heading-size: 30px;
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -20,8 +18,7 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--primary-color);
-} 
-
+}
 
 .logo {
   width: 200px;
@@ -50,9 +47,8 @@ body {
 }
 
 .navigation-list__item--active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 li {
   font-weight: bold;
@@ -73,7 +69,6 @@ form {
   height: 100px;
 }
 
-
 .profile {
   max-width: 700px;
   margin: 0 auto;
@@ -92,9 +87,7 @@ form {
   grid-template-rows: 300px 300px;
   grid-gap: 30px;
   justify-content: center;
-
 }
-
 
 .page-footer {
   clear: both;
@@ -117,7 +110,8 @@ a:visited {
   color: var(--visited-link-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -126,7 +120,7 @@ a:active {
 }
 
 .heading {
- text-align: center;
+  text-align: center;
 }
 
 p {
@@ -138,15 +132,18 @@ p {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
@@ -156,13 +153,15 @@ p {
     font-size: 22px;
   }
 }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 22px;
-  }
+
+.grid__item:last-child {
+  grid-column: auto / auto;
+  grid-row: auto / auto;
+}
+
+h1 {
+  font-size: 22px;
+}
 
 button:hover,
 button:focus,
@@ -172,8 +171,8 @@ button:focus,
   opacity: 0.8;
 }
 
-.button, button {
-  border: none;
+.button,
+button {
   display: inline-block;
   font-family: inherit;
   background-color: lightblue;
@@ -190,6 +189,7 @@ button:focus,
   from {
     fill: #edc655;
   }
+
   to {
     fill: #f76414;
   }
@@ -203,6 +203,7 @@ button:focus,
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -216,6 +217,7 @@ button:focus,
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
