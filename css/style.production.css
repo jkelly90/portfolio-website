@@ -1,6 +1,8 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -27,14 +29,14 @@ body {
 
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -79,47 +81,26 @@ form {
   border-radius: 50%;
 }
 
+.profile__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 30px 300px 30px 300px;
-  grid-template-columns: 300px 300px 300px;
-  -ms-grid-rows: 300px 30px 300px;
-  grid-template-rows: 300px 300px;
+  -ms-grid-columns: 2fr 30px 2fr 30px 2fr;
+  grid-template-columns: 2fr 2fr 2fr;
+  /*grid-template-rows: 300px 300px;*/
   grid-gap: 30px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.grid > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.grid > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-
-.grid > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-
-.grid > *:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-
-.grid > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-
-.grid > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .page-footer {
@@ -129,15 +110,29 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
 .grid__item {
   background-color: lightgray;
   color: black;
+  display: inline-block;
+  border: 2px solid gray;
+  padding: 15px;
+  width: auto;
 }
+
+.grid-img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.contacts {
+  text-align: center;
+}  
 
 a {
   color: #000;
@@ -161,9 +156,9 @@ a:active {
   text-align: center;
 }
 
-p {
+/*p {
   text-align: center;
-}
+}*/
 
 @media all and (max-width: 500px) {
   .grid {
@@ -222,8 +217,8 @@ button:focus,
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-transition-duration: 0.9s;
-  -o-transition-duration: 0.9s;
-  transition-duration: 0.9s;
+       -o-transition-duration: 0.9s;
+          transition-duration: 0.9s;
 }
 
 button {
@@ -237,89 +232,6 @@ button {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-transition-duration: 0.9s;
-  -o-transition-duration: 0.9s;
-  transition-duration: 0.9s;
-}
-
-@-webkit-keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-
-  to {
-    fill: #f76414;
-  }
-}
-
-@keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-
-  to {
-    fill: #f76414;
-  }
-}
-
-.sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-  animation: 4s color-change infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-  animation: 34s cloud-move-reverse infinite alternate linear;
+       -o-transition-duration: 0.9s;
+          transition-duration: 0.9s;
 }
