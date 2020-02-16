@@ -88,10 +88,12 @@ form {
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
-  /*grid-template-rows: 300px 300px;*/
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-rows: 1fr;
   grid-gap: 30px;
   justify-content: center;
+  padding: 50px;
+  max-width: 100%;
 }
 
 .page-footer {
@@ -104,14 +106,21 @@ form {
 .grid__item {
   background-color: lightgray;
   color: black;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   border: 2px solid gray;
-  padding: 15px;
+  padding: 20px;
   width: auto;
 }
 
 .grid-img {
-  align-self: center;
+  grid-area: photo;
+}
+.grid-img img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  width: 100%
 }
 
 .contacts {
@@ -143,7 +152,7 @@ a:active {
 /*p {
   text-align: center;
 }*/
-
+/*
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
@@ -169,12 +178,12 @@ a:active {
   h1 {
     font-size: 22px;
   }
-}
+}}*/
 
 .grid__item:last-child {
   grid-column: auto / auto;
   grid-row: auto / auto;
-}
+
 
 h1 {
   font-size: 22px;
