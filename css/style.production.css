@@ -94,13 +94,15 @@ form {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 30px 2fr 30px 2fr;
-  grid-template-columns: 2fr 2fr 2fr;
-  /*grid-template-rows: 300px 300px;*/
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 50px;
+  max-width: 100%;
 }
 
 .page-footer {
@@ -118,16 +120,27 @@ form {
 .grid__item {
   background-color: lightgray;
   color: black;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 2px solid gray;
-  padding: 15px;
+  padding: 20px;
   width: auto;
 }
 
 .grid-img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  grid-area: photo;
+}
+.grid-img img {
+  width: 500px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%
 }
 
 .contacts {
@@ -156,10 +169,7 @@ a:active {
   text-align: center;
 }
 
-/*p {
-  text-align: center;
-}*/
-
+/
 @media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;

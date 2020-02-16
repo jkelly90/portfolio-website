@@ -149,10 +149,7 @@ a:active {
   text-align: center;
 }
 
-/*p {
-  text-align: center;
-}*/
-/*
+/
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
@@ -178,12 +175,12 @@ a:active {
   h1 {
     font-size: 22px;
   }
-}}*/
+}
 
 .grid__item:last-child {
   grid-column: auto / auto;
   grid-row: auto / auto;
-
+}
 
 h1 {
   font-size: 22px;
