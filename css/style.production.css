@@ -14,6 +14,10 @@ body {
   background-color: #f8f8ff;
 }
 
+.fwh-slide {
+  height: 100vh;
+}
+
 .logo {
   width: 200px;
   height: 70px;
@@ -23,8 +27,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
+  top: 0;
+  position: fixed;
   width: 100%;
   padding: 20px;
+  background-color: #ffffff;
 }
 
 .page-header__item {
@@ -46,9 +54,6 @@ body {
   margin-left: 15px;
 }
 
-.navigation-list__item--active {
-  text-decoration: underline;
-}
 
 li {
   font-weight: bold;
@@ -70,8 +75,9 @@ form {
 }
 
 .profile {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
+  padding-top: 150px;
 }
 
 .profile__portrait {
@@ -114,7 +120,9 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  text-align: left;
+  top: 100px;
+  width: 100%;
 }
 
 .grid__item {
@@ -152,24 +160,26 @@ a {
   text-decoration: none;
 }
 
+
 a:visited {
   color: #696969;
 }
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:active {
   color: #191970;
+  text-decoration: underline;
 }
 
 .heading {
   text-align: center;
 }
 
-/
+
 @media all and (max-width: 500px) {
   .grid {
     -ms-grid-columns: 1fr;
